@@ -1,0 +1,11 @@
+.Pill {
+    background-color: lightgray;
+    border-width: 2px;
+    border-style: solid;
+    padding: 8px 20px;
+    display: inline-block;
+    margin: 4px 5px;
+    border-radius: 32px;
+    border-color: gray;
+    color: rgb(87, 87, 87);
+}
