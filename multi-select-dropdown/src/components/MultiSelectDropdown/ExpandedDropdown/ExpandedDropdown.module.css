@@ -18,9 +18,13 @@ MultiSelectDropdown > div:button {
     width: 100%;
     background-color: white;
     border: none;
+    font-size: 17px;
 }
 
+.MultiSelectDropdownRowDiv {
+    width: 100%;
+}
 
-.MultiSelectDropdownRow > button:active {
-    border: none;
+.MultiSelectDropdownRowDiv > button:hover{
+    background-color:lightgray;
 }

@@ -46,6 +46,19 @@ class MultiSelectDropdown extends Component {
     }
 
     render(){
+
+        const Pills = this.props.data.map(({label, key, isSelected}) => {
+            if(isSelected){ // rendering Pills for only selected items
+                return (
+                    <Pill 
+                        key = {key} // unique key
+                        keys = {key} // passing key as props
+                        label = {label}
+                        onChanged = {this.selectionChangeHandler}
+                    />
+                )
+            } else return null;
+        })
         return(
             <div className = {classes.RealDropdown}>
                 <div ref = {this.wrapperRef} >
@@ -63,22 +76,7 @@ class MultiSelectDropdown extends Component {
                         />
                     )}
                 </div>
-                <div>
-                    {this.props.data.map(({label, key, isSelected}) => {
-                        if(isSelected){ // rendering Pills for only selected items
-                            return (
-                                <Pill 
-                                    key = {key} // unique key
-                                    keys = {key} // passing key as props
-                                    label = {label}
-                                    onChanged = {this.selectionChangeHandler}
-                                />
-                            )
-                        }else{
-                            return null;
-                        }
-                    })}
-                </div>
+                {Pills}
             </div>
         )
     }

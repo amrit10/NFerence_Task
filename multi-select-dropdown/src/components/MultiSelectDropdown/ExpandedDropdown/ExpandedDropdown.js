@@ -8,7 +8,7 @@ class ExpandedDropdown extends Component {
             <div className = {classes.MultiSelectDropdown}>
                 {this.props.data.map(({label, key, isSelected}) => {
                     return (
-                        <div key = {key}  >
+                        <div key = {key} className = {classes.MultiSelectDropdownRowDiv}  >
                             <button className = {classes.MultiSelectDropdownRow} onClick = {() => this.props.onChanged(key)}>
                                 {label}
                                 {isSelected && (

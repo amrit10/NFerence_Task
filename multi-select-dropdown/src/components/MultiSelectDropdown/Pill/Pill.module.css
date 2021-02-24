@@ -6,11 +6,15 @@
     display: inline-block;
     margin: 4px 5px;
     border-radius: 32px;
-    border-color: gray;
-    color: rgb(87, 87, 87);
+    border-color: rgb(99, 98, 98);
+    color: rgb(43, 42, 42);
+    font-weight: 450;
 }
 
 .Pill > button {
-    background-color: transparent;
+    background-color:gray;
+    border-radius: 50%;
     border: none;
+    color: white;
+    margin-left: 5px;
 }
