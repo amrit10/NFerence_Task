@@ -5,12 +5,22 @@
     z-index: 1000;
 }
 
-.MultiSelectDropdown > div:hover {
+MultiSelectDropdown > div:button {
     background-color: gray;
 }
+
 
 .MultiSelectDropdownRow {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    padding: 8px;
+    width: 100%;
+    background-color: white;
+    border: none;
+}
+
+
+.MultiSelectDropdownRow > button:active {
+    border: none;
 }

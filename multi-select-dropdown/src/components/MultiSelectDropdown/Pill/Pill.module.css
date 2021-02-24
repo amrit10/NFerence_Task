@@ -9,3 +9,8 @@
     border-color: gray;
     color: rgb(87, 87, 87);
 }
+
+.Pill > button {
+    background-color: transparent;
+    border: none;
+}

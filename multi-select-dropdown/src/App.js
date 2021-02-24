@@ -1,13 +1,11 @@
 import React, {Component} from 'react';
 
-import RealDropdown from './components/RealDropdown/RealDropdown';
-
-import './App.css';
+import MultiSelectDropdown from './components/MultiSelectDropdown/MultiSelectDropdown';
 
 class App extends Component {
 
-  state = {
-    data: [
+  state = { // Dropdown values with initial selections
+    data: [ 
       {key: "jenny_hess", label: "Jenny Hess", isSelected: true},
       {key: "elliot_fu", label: "Elliot Fu", isSelected: true},
       {key: "stevie_feliciano", label: "Stevie Feliciano", isSelected: false},
@@ -15,23 +13,20 @@ class App extends Component {
     ]
   }
 
-  callback = () => {
+  callback = () => { // As per the ask, modify this callback function (called on any selection change)
     console.log("cb");
   }
 
+  selectionChangeHandler = (updatedData, updatedItem) => { // Passed to children to change state based on selection by user
+    this.setState({data: updatedData},this.callback);
+  };
+
   render(){
-
     return (
-      <div className="App">
-        <RealDropdown 
+        <MultiSelectDropdown 
           data = {this.state.data}
-          onSelect = {(updatedList, updatedItem) => {
-            this.setState({data: updatedList})
-            this.callback();
-          }}
+          onSelect = {this.selectionChangeHandler}
         />
-
-      </div>
     );  
   }
 }
